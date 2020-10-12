@@ -1,15 +1,23 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { NextPage, GetStaticProps } from 'next';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+interface Props {
+  content: { attributes: HomeAttributes };
+}
+interface HomeAttributes {
+  hero_title: string;
+  hero_description: string;
+}
+const HomePage: NextPage<Props> = ({ content }) => {
+  const { attributes } = content;
+  return (
+    <>
+      <h1>{attributes.hero_title}</h1>
+      <p>{attributes.hero_description}</p>
+    </>
+  );
+};
+export const getStaticProps: GetStaticProps = async () => {
+  const content = await import(`../content/pages/${'home'}.md`);
+  return { props: { content: content.default } };
+};
+export default HomePage;

@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "netlify-cms-app": "^2.12.25",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
@@ -16,6 +17,7 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "frontmatter-markdown-loader": "^3.6.1",
     "typescript": "4.0"
   },
   "license": "MIT"
