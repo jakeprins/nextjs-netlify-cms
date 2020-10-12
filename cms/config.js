@@ -15,7 +15,7 @@ export default {
         {
           label: 'Home',
           name: 'home',
-          file: 'src/content/pages/home.md',
+          file: 'content/pages/home.md',
           fields: [
             {
               label: 'Hero Title',
@@ -26,6 +26,11 @@ export default {
               label: 'Hero Description',
               name: 'hero_description',
               widget: 'markdown',
+            },
+            {
+              label: 'Hero Image',
+              name: 'hero_image',
+              widget: 'image',
             },
           ],
         },
