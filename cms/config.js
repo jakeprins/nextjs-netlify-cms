@@ -2,8 +2,8 @@ export default {
   cms_manual_init: true,
   backend: {
     name: 'github',
-    repo: 'yourname/your-github-repo-name',
-    branch: 'master',
+    repo: 'jakeprins/nextjs-netlify-cms',
+    branch: 'main',
   },
   media_folder: 'public/img',
   public_folder: 'img',
