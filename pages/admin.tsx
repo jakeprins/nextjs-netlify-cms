@@ -8,6 +8,9 @@ const CMS = dynamic(
   { ssr: false, loading: () => <p>Loading...</p> }
 );
 const AdminPage: React.FC = () => {
-  return <CMS />;
+    return <>
+      <div id='nc-root' />
+      <CMS />
+    </>
 };
 export default AdminPage;
